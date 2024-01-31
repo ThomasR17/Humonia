@@ -381,6 +381,7 @@
 27/shape_one_way_margin = 0.0
 27/shapes = [  ]
 27/z_index = 0
+
 28/name = "chemin1.png 28"
 28/texture = ExtResource( 1 )
 28/tex_offset = Vector2( 0, 0 )
@@ -414,6 +415,12 @@
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
 30/region = Rect2( 119, 153, 16, 16 )
+30/name = "roguelikeSheet_transparent.png 30"
+30/texture = ExtResource( 1 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 68, 170, 16, 16 )
+
 30/tile_mode = 0
 30/occluder_offset = Vector2( 0, 0 )
 30/navigation_offset = Vector2( 0, 0 )
@@ -423,11 +430,19 @@
 30/shape_one_way_margin = 0.0
 30/shapes = [  ]
 30/z_index = 0
+
 31/name = "chemin4.png 31"
 31/texture = ExtResource( 1 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
 31/region = Rect2( 136, 153, 16, 16 )
+
+31/name = "path.png 31"
+31/texture = ExtResource( 1 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 51, 170, 16, 16 )
+
 31/tile_mode = 0
 31/occluder_offset = Vector2( 0, 0 )
 31/navigation_offset = Vector2( 0, 0 )
@@ -437,6 +452,7 @@
 31/shape_one_way_margin = 0.0
 31/shapes = [  ]
 31/z_index = 0
+
 32/name = "chemin5.png 32"
 32/texture = ExtResource( 1 )
 32/tex_offset = Vector2( 0, 0 )
