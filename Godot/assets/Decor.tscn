@@ -206,6 +206,7 @@ tile_data = PoolIntArray( -589811, 0, 0, -589810, 1610612738, 0, -589809, 1, 0, 
 position = Vector2( 23, 247 )
 frames = SubResource( 3 )
 animation = "New Anim"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fire_Camp"]
@@ -219,6 +220,7 @@ shape = SubResource( 4 )
 position = Vector2( 983, 55 )
 frames = SubResource( 3 )
 animation = "New Anim"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fire_Camp2"]
@@ -232,6 +234,7 @@ shape = SubResource( 4 )
 position = Vector2( 983, 55 )
 frames = SubResource( 3 )
 animation = "New Anim"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fire_Camp4"]
