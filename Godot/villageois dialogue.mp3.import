@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/villageois dialogue.mp3-e84473722ff79ff1a85a0bcace93e61e.mp3str"
+
+[deps]
+
+source_file="res://villageois dialogue.mp3"
+dest_files=[ "res://.import/villageois dialogue.mp3-e84473722ff79ff1a85a0bcace93e61e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
