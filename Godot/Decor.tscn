@@ -26,7 +26,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 8, 7.5 )
+extents = Vector2( 8, 7.875 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
@@ -47,7 +47,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 8.5, 5.5 )
+extents = Vector2( 24, 7.75 )
 
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
@@ -126,7 +126,6 @@ format = 1
 tile_data = PoolIntArray( -786428, 0, 0, -786427, 1610612738, 0, -786426, 11, 0, -786425, 11, 0, -786424, 11, 0, -786423, 1, 0, -720892, 3, 0, -720891, 1610612738, 0, -720890, 11, 0, -720889, 11, 0, -720888, 11, 0, -720887, 14, 0, -655356, 13, 0, -655355, 1610612738, 0, -655354, 11, 0, -655353, 11, 0, -655352, 11, 0, -655351, 2, 0, -589820, 4, 0, -589819, 8, 0, -589818, 8, 0, -589817, 8, 0, -589816, 8, 0, -589815, 5, 0, -524283, 20, 0, -524280, 20, 0, -393211, 20, 0, -393208, 20, 0, -327674, 16, 0, -327673, 17, 0 )
 
 [node name="moyen maison" type="Node2D" parent="village"]
-visible = false
 position = Vector2( -80, 48 )
 
 [node name="fondation" type="TileMap" parent="village/moyen maison"]
@@ -142,7 +141,6 @@ format = 1
 tile_data = PoolIntArray( -589811, 0, 0, -589810, 1610612738, 0, -589809, 1, 0, -524275, 3, 0, -524274, 1610612738, 0, -524273, 14, 0, -458739, 4, 0, -458738, 8, 0, -458737, 5, 0, -393202, 19, 0, -327666, 18, 0 )
 
 [node name="petite maison" type="Node2D" parent="village"]
-visible = false
 position = Vector2( -64, 40 )
 
 [node name="fondation" type="TileMap" parent="village/petite maison"]
@@ -242,21 +240,7 @@ playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fire_Camp2"]
 visible = false
-position = Vector2( 24, 23 )
-shape = SubResource( 4 )
-
-[node name="Fire_Camp4" type="Area2D" parent="."]
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Fire_Camp4"]
-position = Vector2( 983, 55 )
-frames = SubResource( 3 )
-animation = "New Anim"
-frame = 1
-playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fire_Camp4"]
-visible = false
-position = Vector2( 24, 23 )
+position = Vector2( 984, 56.125 )
 shape = SubResource( 4 )
 
 [node name="boat_Animated" type="Area2D" parent="."]
@@ -264,12 +248,11 @@ shape = SubResource( 4 )
 [node name="boat" type="AnimatedSprite" parent="boat_Animated"]
 position = Vector2( 936, 378 )
 frames = SubResource( 7 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boat_Animated"]
 visible = false
-position = Vector2( 37.5, 6.5 )
+position = Vector2( 936, 375.75 )
 shape = SubResource( 8 )
 
 [node name="Rocket" type="Area2D" parent="."]
