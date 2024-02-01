@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/maison autres.tres" type="TileSet" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://assets/rocket.png" type="Texture" id=6]
 [ext_resource path="res://foret.mp3" type="AudioStream" id=7]
 [ext_resource path="res://assets/campement.tres" type="TileSet" id=8]
+[ext_resource path="res://feu de camp.wav" type="AudioStream" id=9]
+[ext_resource path="res://ruisseau_foret.wav" type="AudioStream" id=10]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -61,6 +63,8 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 21.5, 40.5 )
+
+[sub_resource type="RectangleShape2D" id=11]
 
 [node name="Level" type="Node2D"]
 __meta__ = {
@@ -124,13 +128,20 @@ position = Vector2( 224, 168 )
 position = Vector2( 23, 247 )
 frames = SubResource( 3 )
 animation = "New Anim"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="flora/Fire_Camp"]
 visible = false
 position = Vector2( 24, 23 )
 shape = SubResource( 4 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="flora/Fire_Camp"]
+position = Vector2( 24, 244 )
+stream = ExtResource( 9 )
+volume_db = -20.0
+autoplay = true
+max_distance = 50.0
+attenuation = 0.5
 
 [node name="Fire_Camp2" type="Area2D" parent="flora"]
 position = Vector2( 280, 208 )
@@ -139,12 +150,21 @@ position = Vector2( 280, 208 )
 position = Vector2( 23, 247 )
 frames = SubResource( 3 )
 animation = "New Anim"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="flora/Fire_Camp2"]
 visible = false
 position = Vector2( 24, 23 )
 shape = SubResource( 4 )
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="flora/Fire_Camp2"]
+position = Vector2( 20, 248 )
+stream = ExtResource( 9 )
+volume_db = -20.0
+autoplay = true
+max_distance = 50.0
+attenuation = 0.5
 
 [node name="village" type="Node2D" parent="."]
 
@@ -267,7 +287,6 @@ tile_data = PoolIntArray( -589811, 0, 0, -589810, 1610612738, 0, -589809, 1, 0, 
 position = Vector2( 23, 247 )
 frames = SubResource( 3 )
 animation = "New Anim"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fire_Camp"]
@@ -275,19 +294,34 @@ visible = false
 position = Vector2( 24, 23 )
 shape = SubResource( 4 )
 
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Fire_Camp"]
+position = Vector2( 22, 250 )
+stream = ExtResource( 9 )
+volume_db = -20.0
+autoplay = true
+max_distance = 50.0
+attenuation = 0.5
+
 [node name="Fire_Camp2" type="Area2D" parent="."]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Fire_Camp2"]
 position = Vector2( 983, 55 )
 frames = SubResource( 3 )
 animation = "New Anim"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fire_Camp2"]
 visible = false
 position = Vector2( 984, 56.125 )
 shape = SubResource( 4 )
+
+[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="Fire_Camp2"]
+position = Vector2( 224, 168 )
+stream = ExtResource( 9 )
+volume_db = -20.0
+autoplay = true
+max_distance = 50.0
+attenuation = 0.5
 
 [node name="boat_Animated" type="Area2D" parent="."]
 
@@ -314,7 +348,52 @@ visible = false
 position = Vector2( 46.5, 562.5 )
 shape = SubResource( 10 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Fond" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 volume_db = -20.0
 autoplay = true
+
+[node name="SOn_riviere1" type="Area2D" parent="."]
+position = Vector2( 816, 183 )
+scale = Vector2( -4.98522, 26.253 )
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="SOn_riviere1"]
+position = Vector2( 2.00592, -1.94263 )
+stream = ExtResource( 10 )
+volume_db = -20.0
+autoplay = true
+max_distance = 250.0
+attenuation = 0.435275
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SOn_riviere1"]
+shape = SubResource( 11 )
+
+[node name="Son_riviere2" type="Area2D" parent="."]
+position = Vector2( 912, 359 )
+scale = Vector2( -4.80805, -7.05373 )
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Son_riviere2"]
+position = Vector2( -2.91179, 2.69361 )
+stream = ExtResource( 10 )
+volume_db = -20.0
+autoplay = true
+max_distance = 250.0
+attenuation = 0.435275
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Son_riviere2"]
+shape = SubResource( 11 )
+
+[node name="Son_riviere3" type="Area2D" parent="."]
+position = Vector2( 25, 246 )
+scale = Vector2( -4.80805, -5.45373 )
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Son_riviere3"]
+position = Vector2( -0.623953, 0.366722 )
+stream = ExtResource( 10 )
+volume_db = -20.0
+autoplay = true
+max_distance = 100.0
+attenuation = 0.435275
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Son_riviere3"]
+shape = SubResource( 11 )
